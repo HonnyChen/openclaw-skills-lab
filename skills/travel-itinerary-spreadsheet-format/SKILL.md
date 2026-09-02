@@ -30,6 +30,7 @@ license: MIT
 - Put reservation advice and related URLs together. Use one URL per line when multiple links are needed.
 - Distinguish official sources from third-party booking pages.
 - Flag cancellation rules and time-sensitive facts that must be checked again near departure.
+- When a destination offers transit or sightseeing passes, compare the planned paid trips and restrictions before recommending a pass; do not assume a pass is worthwhile merely because it is available.
 
 **Done when:** each scheduled row contains enough information for a traveler to act without mixing unrelated planning notes into the timetable.
 
