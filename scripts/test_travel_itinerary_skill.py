@@ -43,7 +43,8 @@ class TravelItinerarySkillContractTests(unittest.TestCase):
     def test_workflow_retains_required_behaviors(self) -> None:
         skill = (SKILL_DIR / "SKILL.md").read_text(encoding="utf-8")
         layout = (SKILL_DIR / "references" / "layout-spec.md").read_text(encoding="utf-8")
-        combined = skill + "\n" + layout
+        output_modes = (SKILL_DIR / "references" / "output-modes.md").read_text(encoding="utf-8")
+        combined = skill + "\n" + layout + "\n" + output_modes
         required_phrases = [
             "Preserve intentional user edits",
             "Keep reservation guidance and reservation links together",
@@ -58,6 +59,23 @@ class TravelItinerarySkillContractTests(unittest.TestCase):
         for phrase in required_phrases:
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, combined)
+
+    def test_output_mode_resolution_and_privacy_contract(self) -> None:
+        text = (SKILL_DIR / "references" / "output-modes.md").read_text(encoding="utf-8")
+        required_phrases = [
+            "existing spreadsheet that the user explicitly asked to update",
+            "format or destination explicitly selected for the current task",
+            "previously saved itinerary-output preference",
+            "Microsoft Excel `.xlsx` workbook as the default",
+            "attempt a read-only metadata or range read",
+            "CSV result is a data fallback",
+            "must not change the saved default",
+            "Do not persist private spreadsheet URLs",
+            "never request credentials",
+        ]
+        for phrase in required_phrases:
+            with self.subTest(phrase=phrase):
+                self.assertIn(phrase, text)
 
 
 if __name__ == "__main__":

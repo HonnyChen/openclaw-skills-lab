@@ -8,7 +8,7 @@ A community-oriented collection of reusable OpenClaw skills developed from pract
 
 | Skill | Purpose | Status |
 | --- | --- | --- |
-| [`travel-itinerary-spreadsheet-format`](skills/travel-itinerary-spreadsheet-format/) | Create or normalize detailed travel itinerary spreadsheets with a consistent 12-column landscape layout. | Draft |
+| [`travel-itinerary-spreadsheet-format`](skills/travel-itinerary-spreadsheet-format/) | Create or normalize detailed travel itinerary spreadsheets in an accessible existing sheet or a portable Excel workbook, with a consistent 12-column landscape layout. | Draft |
 
 ## Install a skill
 
