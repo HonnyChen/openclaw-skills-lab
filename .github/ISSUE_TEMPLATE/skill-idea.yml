@@ -1,0 +1,39 @@
+name: Skill idea
+description: Propose a reusable OpenClaw skill or workflow.
+title: "[Skill idea] "
+labels: ["skill-idea"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What recurring user problem should this skill solve?
+    validations:
+      required: true
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Example requests
+      description: Give requests that should trigger the skill.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected outcome
+      description: What should be produced or changed?
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Tools and dependencies
+  - type: textarea
+    id: risks
+    attributes:
+      label: Privacy and safety considerations
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: How can the result be proved correct?
